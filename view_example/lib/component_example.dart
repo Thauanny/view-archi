@@ -1,6 +1,6 @@
 import 'package:flutter/widgets.dart';
 
 abstract class ComponentExample {
-  String get getName;
+  String get name;
   Map<String, Widget> examples();
 }

@@ -13,14 +13,14 @@ class _ButtonsPageState extends State<ButtonsPage> {
 
   List<Widget> _buildComponent() {
     buttons.sort((ComponentModel a, ComponentModel b) =>
-        a.example.getName.compareTo(b.example.getName));
+        a.example.name.compareTo(b.example.name));
     return buttons
         .where((a) => a.visible)
         .map(
           (e) => Visibility(
             visible: e.visible,
             child: ExpansionTile(
-              title: Text(e.example.getName),
+              title: Text(e.example.name),
               children: e
                   .widgets()
                   .entries
@@ -61,9 +61,7 @@ class _ButtonsPageState extends State<ButtonsPage> {
       child: TextField(
         onChanged: (s) {
           for (var element in buttons) {
-            if (element.example.getName
-                .toLowerCase()
-                .contains(s.toLowerCase())) {
+            if (element.example.name.toLowerCase().contains(s.toLowerCase())) {
               element.visible = true;
             } else {
               element.visible = false;

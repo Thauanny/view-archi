@@ -20,5 +20,5 @@ class ButtonCircularExamples extends ComponentExample {
   }
 
   @override
-  String get getName => "CircularButton";
+  String get name => "CircularButton";
 }

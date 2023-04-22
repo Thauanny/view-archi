@@ -6,6 +6,7 @@ class CircularButton extends StatelessWidget {
   final double height;
   final double width;
   final Color backgroundColor;
+  final double iconSize;
   const CircularButton({
     super.key,
     required this.icon,
@@ -13,6 +14,7 @@ class CircularButton extends StatelessWidget {
     required this.height,
     required this.width,
     required this.backgroundColor,
+    required this.iconSize,
   });
 
   @override
@@ -29,7 +31,7 @@ class CircularButton extends StatelessWidget {
             borderRadius: BorderRadius.circular(50),
           ),
         ),
-        child: Icon(icon, size: 100),
+        child: Icon(icon, size: iconSize),
       ),
     );
   }

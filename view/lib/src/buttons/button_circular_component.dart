@@ -7,6 +7,7 @@ class CircularButton extends StatelessWidget {
   final double width;
   final Color backgroundColor;
   final double iconSize;
+  final BorderRadiusGeometry? borderradius;
   const CircularButton({
     super.key,
     required this.icon,
@@ -15,6 +16,7 @@ class CircularButton extends StatelessWidget {
     required this.width,
     required this.backgroundColor,
     required this.iconSize,
+    this.borderradius,
   });
 
   @override
@@ -25,10 +27,9 @@ class CircularButton extends StatelessWidget {
       child: ElevatedButton(
         onPressed: onTap,
         style: ElevatedButton.styleFrom(
-          padding: EdgeInsets.zero,
           backgroundColor: backgroundColor,
           shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(50),
+            borderRadius: borderradius ?? BorderRadius.circular(100),
           ),
         ),
         child: Icon(icon, size: iconSize),

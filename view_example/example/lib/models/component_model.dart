@@ -14,6 +14,7 @@ class ComponentModel {
   static List<ComponentModel> get buttons {
     return [
       ComponentModel(ButtonCircularExamples()),
+      ComponentModel(JoyStickExamples()),
     ];
   }
 }

@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:view_example/component_example.dart';
-import 'package:view/view.dart';
+import 'package:view/components/buttons.dart' show CircularButton;
 
 class ButtonCircularExamples extends ComponentExample {
   static CircularButton standard() {
     return CircularButton(
+        iconSize: 70,
         icon: Icons.arrow_back,
         onTap: () => debugPrint('tap'),
         height: 100,

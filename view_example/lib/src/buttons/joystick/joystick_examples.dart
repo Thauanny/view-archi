@@ -13,24 +13,36 @@ class JoyStickExamples extends ComponentExample {
           index: 0,
           backgroundColor: Colors.blue[600]!,
           buttonIcon: Icons.keyboard_arrow_right_outlined,
+          onTap: () {
+            debugPrint('button 0');
+          },
         ),
         JoyStickItem(
           size: 70,
           index: 1,
           backgroundColor: Colors.yellow[700]!,
           buttonIcon: Icons.keyboard_arrow_down_outlined,
+          onTap: () {
+            debugPrint('button 1');
+          },
         ),
         JoyStickItem(
           size: 70,
           index: 2,
           backgroundColor: Colors.red[600]!,
           buttonIcon: Icons.keyboard_arrow_left_outlined,
+          onTap: () {
+            debugPrint('button 2');
+          },
         ),
         JoyStickItem(
           size: 70,
           index: 3,
           backgroundColor: Colors.green[600]!,
           buttonIcon: Icons.keyboard_arrow_up_outlined,
+          onTap: () {
+            debugPrint('button 3');
+          },
         ),
       ],
     );

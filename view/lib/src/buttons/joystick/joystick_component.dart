@@ -78,17 +78,12 @@ class JoyStick extends StatelessWidget {
       child: Padding(
         padding: EdgeInsets.all(buttonsPadding!),
         child: CircularButton(
-          backgroundColor: paddButton.backgroundColor,
-          width: innerCircleSize,
-          height: innerCircleSize,
-          icon: paddButton.buttonIcon,
-          iconSize: paddButton.size,
-          onTap: () {
-            debugPrint(
-              " ${[paddButton.index]}",
-            );
-          },
-        ),
+            backgroundColor: paddButton.backgroundColor,
+            width: innerCircleSize,
+            height: innerCircleSize,
+            icon: paddButton.buttonIcon,
+            iconSize: paddButton.size,
+            onTap: buttons[index].onTap),
       ),
     );
   }
